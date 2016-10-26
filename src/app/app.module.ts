@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from  '@angular/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -9,16 +10,19 @@ import { ContactsHeaderComponent } from './contacts-header/contacts-header.compo
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactsService } from './contacts.service';
 import 'rxjs/add/operator/map';
+import { ContactsEditorComponent } from './contacts-editor/contacts-editor.component';
 
 @NgModule({
   declarations: [
     ContactsAppComponent,
     ContactsHeaderComponent,
     ContactsListComponent,
-    ContactsDetailComponent
+    ContactsDetailComponent,
+    ContactsEditorComponent
   ],
   imports: [
       BrowserModule,
+      FormsModule,
       HttpModule,
       RouterModule.forRoot(ContactsAppRoutes)
   ],
