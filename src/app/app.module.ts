@@ -9,8 +9,8 @@ import { ContactsDetailComponent } from './contacts-detail/contacts-detail.compo
 import { ContactsHeaderComponent } from './contacts-header/contacts-header.component';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactsService } from './contacts.service';
-import 'rxjs/add/operator/map';
 import { ContactsEditorComponent } from './contacts-editor/contacts-editor.component';
+import 'rxjs/add/operator/map';
 
 @NgModule({
   declarations: [
