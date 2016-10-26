@@ -10,7 +10,6 @@ import { ContactsService } from '../contacts.service';
 })
 export class ContactsDetailComponent implements OnInit {
 
-  contacts: Array<Contact>;
   contact: Contact;
 
   constructor(
@@ -20,8 +19,9 @@ export class ContactsDetailComponent implements OnInit {
 
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
-    this.contact = this.contactsService
-        .getContact(id);
+    this.contactsService
+        .getContact(id)
+        .subscribe(contact => this.contact = contact);
   }
 
 }
