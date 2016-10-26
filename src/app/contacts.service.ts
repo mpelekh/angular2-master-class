@@ -9,6 +9,10 @@ export class ContactsService {
 
   constructor() { }
 
+  getContact(id: string) {
+    return this.contacts.find(contact => (contact.id + '') === id);
+  }
+
   getContacts() {
     return this.contacts;
   }

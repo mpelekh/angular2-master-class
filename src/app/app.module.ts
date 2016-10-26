@@ -6,12 +6,14 @@ import { ContactsAppRoutes } from './app.routes';
 import { ContactsHeaderComponent } from './contacts-header/contacts-header.component';
 import { ContactsService } from './contacts.service';
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
+import { ContactsDetailComponent } from './contacts-detail/contacts-detail.component';
 
 @NgModule({
   declarations: [
     ContactsAppComponent,
     ContactsHeaderComponent,
-    ContactsListComponent
+    ContactsListComponent,
+    ContactsDetailComponent
   ],
   imports: [
       BrowserModule,
