@@ -3,6 +3,7 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from  '@angular/http';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
+import {Title} from '@angular/platform-browser';
 import {ContactsAppComponent} from './contacts.component';
 import {ContactsAppRoutes} from './app.routes';
 import {ContactsDetailComponent} from './contacts-detail/contacts-detail.component';
@@ -39,7 +40,8 @@ import {ContactsDetailViewComponent} from './contacts-detail-view/contacts-detai
     ],
     providers: [
         ContactsService,
-        EventBusService
+        EventBusService,
+        Title
     ]
 })
 export class ContactsModule {
