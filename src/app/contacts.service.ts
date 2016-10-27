@@ -7,6 +7,7 @@ export class ContactsService {
 
   private API_ENDPOINT = 'http://localhost:4201';
   private API_CONTACTS_PATH = '/api/contacts/';
+  private API_SEARCH_PATH = '/api/search?text=';
 
   constructor(private http: Http) { }
 
@@ -25,6 +26,12 @@ export class ContactsService {
   updateContact(contact: Contact) {
     let url = this.API_ENDPOINT + this.API_CONTACTS_PATH + contact.id;
     return this.http.put(url, contact);
+  }
+
+  search(term: string) {
+    return this.http.get(this.API_ENDPOINT + this.API_SEARCH_PATH  + term)
+        .map(res => res.json())
+        .map(data => data.items);
   }
 
 }

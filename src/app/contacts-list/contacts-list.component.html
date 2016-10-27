@@ -1,3 +1,13 @@
+
+<div class="text-darken-4">
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="searchInput" name="searchInput" type="text" class="validate" (input)="search($event.target.value)"/>
+      <label class="active" for="searchInput">Search</label>
+    </div>
+  </div>
+</div>
+
 <ul class="collection">
   <li *ngFor="let contact of contacts | async" class="collection-item avatar">
     <a [routerLink]="['/contact', contact.id]">
