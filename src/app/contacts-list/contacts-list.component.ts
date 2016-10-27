@@ -19,21 +19,11 @@ export class ContactsListComponent implements OnInit {
 
     ngOnInit() {
 
-        // alternative code style:
-        /*this.contacts =
-            this.terms$.debounceTime(400)
-                .distinctUntilChanged()
-                .switchMap((term) => this.contactsService.search(term))
-                .merge(this.contactsService.getContacts());*/
-
-        let searchObservable =
-            this.terms$.debounceTime(400)
-                .distinctUntilChanged()
-                .switchMap((term) => this.contactsService.search(term));
-
         let initObservable = this.contactsService.getContacts();
 
-        this.contacts = searchObservable.merge(initObservable);
+        this.contacts = this.contactsService.search(this.terms$, 300)
+            .merge(initObservable);
+
     }
 
 }
