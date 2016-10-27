@@ -15,6 +15,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/merge';
 import 'rxjs/add/operator/switchMap';
+import { ContactsDetailViewComponent } from './contacts-detail-view/contacts-detail-view.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import 'rxjs/add/operator/switchMap';
     ContactsHeaderComponent,
     ContactsListComponent,
     ContactsDetailComponent,
-    ContactsEditorComponent
+    ContactsEditorComponent,
+    ContactsDetailViewComponent
   ],
   imports: [
       BrowserModule,
