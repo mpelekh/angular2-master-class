@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 import {Contact} from '../models/contact';
 import {ContactsService} from '../contacts.service';
@@ -8,7 +8,7 @@ import {ContactsService} from '../contacts.service';
     templateUrl: './contacts-creator.component.html',
     styleUrls: ['./contacts-creator.component.css']
 })
-export class ContactsCreatorComponent implements OnInit {
+export class ContactsCreatorComponent {
 
     constructor(
         private contactsService: ContactsService,
