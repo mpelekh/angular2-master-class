@@ -1,6 +1,6 @@
 # Angular 2 Master Class
 
-My first steps with AngularJS 2 during the Angular 2 Master Class by @toughtram.
+My first steps with AngularJS 2 during the Angular 2 Master Class by [@toughtram](https://twitter.com/thoughtram).
 
 Prerequisites: [Preparation Guide](http://thoughtram.io/prepare-for-your-training.html)
 
