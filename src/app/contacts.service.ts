@@ -13,6 +13,10 @@ export class ContactsService {
     constructor(private http: Http) {
     }
 
+    addContact(contact: Contact) {
+        return this.http.post(this.API_ENDPOINT + this.API_CONTACTS_PATH, contact);
+    }
+
     getContact(id: string) {
         return this.http.get(this.API_ENDPOINT + this.API_CONTACTS_PATH + id)
             .map(res => res.json())
