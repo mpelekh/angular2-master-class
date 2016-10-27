@@ -1,14 +1,32 @@
 <div class="row">
 	<form class="col s12 m7">
 		<div class="card">
-			<form #createContactForm="ngForm"
+			<form novalidate
+				#createContactForm="ngForm"
 				(ngSubmit)="save(createContactForm.value)">
 				<div class="card-content grey-text text-darken-4">
 					<div class="row">
 						<div class="input-field col s12">
-							<i class="material-icons prefix">account_circle</i><input id="name" name="name" class="validate"
-							ngModel>
+							<i class="material-icons prefix">account_circle</i>
+							<input id="name" name="name" class="validate"
+								#name="ngModel"
+								ngModel
+								minlength="3"
+								required
+								[ngClass]="{
+									'invalid': !name.valid &&
+									(!name.pristine || !name.untouched)
+									}">
 							<label class="active" for="name">Name</label>
+							<div class="errors" *ngIf="(!name.pristine || !name.untouched)">
+								<p *ngIf="name.errors?.minlength" class="invalid">
+									Please enter at least 3 chars.
+								</p>
+								<p *ngIf="name.errors?.required" class="invalid">
+									This field is required.
+								</p>
+							</div>
+
 						</div>
 					</div>
 					<div class="row">
@@ -71,7 +89,7 @@
 				</div>
 				<div class="card-action">
 					<a class="btn">Cancel</a>
-					<button type="submit" class="btn">Save</button>
+					<button type="submit" class="btn" [disabled]="!createContactForm.valid">Save</button>
 				</div>
 			</form>
 		</div>
