@@ -31,4 +31,10 @@ export class ContactsListComponent implements OnInit {
 
     }
 
+    // not yet implemented in backend
+    deleteContact(contact: Contact) {
+        // this.contactsService.deleteContact(contact.id)
+        //     .subscribe();
+    }
+
 }

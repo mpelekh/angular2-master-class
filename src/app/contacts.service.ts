@@ -17,6 +17,11 @@ export class ContactsService {
         return this.http.post(this.API_ENDPOINT + this.API_CONTACTS_PATH, contact);
     }
 
+    // not yet implemented in backend
+    deleteContact(id: number) {
+        // return this.http.delete(this.API_ENDPOINT + this.API_CONTACTS_PATH + id);
+    }
+
     getContact(id: string) {
         return this.http.get(this.API_ENDPOINT + this.API_CONTACTS_PATH + id)
             .map(res => res.json())
