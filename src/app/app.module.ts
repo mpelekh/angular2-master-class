@@ -10,6 +10,8 @@ import { ContactsHeaderComponent } from './contacts-header/contacts-header.compo
 import { ContactsListComponent } from './contacts-list/contacts-list.component';
 import { ContactsService } from './contacts.service';
 import { ContactsEditorComponent } from './contacts-editor/contacts-editor.component';
+import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/map';
 
 @NgModule({

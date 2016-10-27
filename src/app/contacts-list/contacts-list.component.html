@@ -2,7 +2,7 @@
 <div class="text-darken-4">
   <div class="row">
     <div class="input-field col s12">
-      <input id="searchInput" name="searchInput" type="text" class="validate" (input)="search($event.target.value)"/>
+      <input id="searchInput" name="searchInput" type="text" class="validate" (input)="terms$.next($event.target.value)"/>
       <label class="active" for="searchInput">Search</label>
     </div>
   </div>
